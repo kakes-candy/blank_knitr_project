@@ -1,0 +1,56 @@
+\documentclass{article}
+
+
+
+<<gegevens_preamble, echo=FALSE, message=FALSE, warning=FALSE>>=
+
+titel_header <- "Titel"
+
+library(knitr)
+
+
+@
+
+
+
+\input{latex_hulpbestanden/standard_preamble.tex}
+
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+
+% Titel die in de header gaat verschijnen
+\fancyhead[C]{\Sexpr{titel_header}} 
+
+
+
+
+
+<<R_scripts, echo=FALSE, message=FALSE, warning=FALSE>>=
+
+read_chunk(path = "./code/R_code.R")
+
+@
+
+<<voorbereiding, echo=FALSE, message=FALSE, warning=FALSE>>=
+
+@
+
+<<datum, echo=FALSE, message=FALSE, warning=FALSE>>=
+datum_creatie <- format(Sys.Date(), format = "%d-%m-%Y")
+
+@
+
+
+\begin{document}
+
+\input{./tables/tabel.tex}
+
+
+<< echo=FALSE, message=FALSE, warning=FALSE >>=
+#kable(test_table)
+
+
+@
+
+
+\end{document}

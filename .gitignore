@@ -1,0 +1,16 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+data/*
+grafieken/*
+output/*
+tables/*
+!*/.gitkeep
+*.aux
+*.log
+*.out
+latex_document.pdf
+latex_document.tex
+latex_document-concordance.tex
+nul
